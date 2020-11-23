@@ -1,3 +1,9 @@
+*
+{
+    padding: 0px;
+    margin: 0px; 
+}
+
 @font-face {
     font-family: 'Raleway';
     src: url('raleway/Raleway-Regular.ttf');
@@ -5,9 +11,23 @@
 
 body
 {
-    margin-left: 65px; 
-    margin-right: 65px;
     font-family: Raleway;
+}
+
+.mt-40
+{
+    margin-top: 40px;
+}
+
+.mt-15
+{
+    margin-top: 15px;
+}
+
+.container
+{
+    max-width: 1340px;
+    margin: auto; 
 }
 
 a
@@ -36,7 +56,7 @@ header > .menu > img
 
 header > .menu > nav > ul > li:not(:nth-child(3))
 {
-    padding-right: 90px;
+    margin-right: 40px;
 }
 
 header > .menu > nav > ul > li:nth-child(3)
@@ -70,7 +90,6 @@ h1
 
 #sous_titre
 {
-    margin-top: -20px;
     font-size: 1.4em;
     font-weight: normal;
 }
@@ -79,7 +98,6 @@ h1
 {
     display: flex;
     flex-direction: row; 
-    margin-top: -40px; 
 }
 
 #localisation
@@ -90,9 +108,7 @@ h1
     padding-right: 20px; 
     padding-left: 20px; 
     height: 50px;
-    margin-top: 15px;
     border-radius: 10px;
-    margin-right: -3px;
 }
 
 #text_barre_de_recherche
@@ -105,7 +121,6 @@ h1
     padding-left: 20px; 
     font-weight: bold;
     font-size: 1.3em;  
-    margin-left: -2px;
 }
 
 #text_barre_de_recherche::placeholder
@@ -117,37 +132,27 @@ h1
 {
     background-color: #0065FC;
     color: white; 
-    padding-top: 10px; 
-    padding-bottom: 10px;
-    padding-left: 20px; 
-    padding-right: 20px; 
+    padding: 10px 20px 10px 20px;
     font-weight: bold;
     font-size: 1.3em;
     border-style: solid; 
     border-color: #0065FC; 
     border-radius: 15px;
-    margin-left: -15px; 
+    margin-left: -20px; 
 }
 
 .filtres
 {
     display: flex;
-    flex-direction: row;
     font-weight: bold;
     font-size: 1.3em; 
-}
-
-.filtres > p
-{
-    margin-right: -40px;
+    align-items: center;
 }
 
 .filtres > ul
 {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
 }
 
 .filtres > ul > li
@@ -156,7 +161,19 @@ h1
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    margin: -30px 0px 0px 80px; 
+    margin-left: 30px; 
+}
+
+.filtres > ul > li > div
+{
+    display: flex;
+    height: 50px;
+    width: 50px;
+    background-color: #DEEBFF;
+    color: #0065FC; 
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
 }
 
 .filtres > ul > li > p
@@ -166,15 +183,13 @@ h1
     border-left-style: none; 
     border-radius: 15px; 
     padding: 10px 30px 10px 30px; 
+    margin-left: -20px;
 }
 
-.filtres > ul > li > i
+form
 {
-    padding: 15px 15px 15px 15px; 
-    background-color: #DEEBFF;
-    color: #0065FC; 
-    border-radius: 100%;
-    margin-right: -20px; 
+    margin-left: -5px;
+    z-index: -1;
 }
 
 #logements_disponibles_500
@@ -209,49 +224,43 @@ h1
 #logements_disponibles
 {
     background-color: #F2F2F2; 
-    max-width: 1160px;
-    padding-left: 25px; 
-    padding-right: 25px;  
+    max-width: 880px;
+    padding: 40px;
     border-radius: 15px;
 }
 
 #les_plus_populaires
 {
-    max-width: 545px;
+    max-width: 420px;
     background-color: #F2F2F2;
-    margin-left: 50px; 
-    padding: 0px 50px 0px 50px; 
     border-radius: 15px;
+    padding: 0px 35px 0px 35px;
 }
 
 #titre_logement_disponible
 {
-    font-size: 2.4em;
-    margin-left: 20px; 
+    font-size: 1.3em;
 }
 
 #les_bloc_de_logement_disponible
 {
     display: flex;
-    justify-content: space-around;
-    flex-direction: row;
     flex-wrap: wrap; 
+    justify-content: space-between;
 }
 
 .bloc_logement
 {
     background-color: white; 
-    margin-right: 10px;
-    margin-left: 10px;
-    margin-bottom: 30px;
-    padding: 5px 5px 10px 5px; 
+    margin-top: 30px;
+    padding: 5px; 
     border-radius: 10px;
 }
 
 .images_logements
 {
-    width: 315px;
-    height: 150px; 
+    width: 240px;
+    height: 120px; 
     object-fit: cover;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -260,41 +269,42 @@ h1
 .nom_du_logement
 {
     font-weight: bold;
-    font-size: 1.3em;
-    margin-bottom: -5px;
-    padding-left: 20px;
+    font-size: 1em;
+    padding-left: 15px;
+    margin-top: 10px; 
 }
 
 .prix_du_logement
 {
-    padding-left: 20px; 
+    padding-left: 15px; 
+    margin-top: 10px; 
 }
 
 .bloc_logement > .étoiles
 {
-    padding-left: 20px; 
+    padding-left: 15px; 
+    margin-top: 10px; 
 }
 
 .étoiles
 {
-    margin-top: -5px; 
     color:  #0065FC; 
 }
 
 #afficher_plus
 {
-    margin-left: 20px; 
+    margin-top: 40px; 
+    font-weight: bold;
 }
 
 #titre_les_plus_populaire
 {
     display: flex; 
-    flex-direction: row;
     font-weight: bold;
     align-items: center;
     justify-content: space-between;
-    font-size: 2em;
-    padding-left: 20px;
+    font-size: 1.3em;
+    margin-top: 30px;
 }
 
 .bloc_type_les_plus_populaires
@@ -302,7 +312,7 @@ h1
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 20px 0px 20px 0px; 
+    margin: 30px 0px 0px 0px; 
     background-color: white;
     padding: 10px 10px 10px 10px; 
     border-radius: 15px;
@@ -310,8 +320,8 @@ h1
 
 .recadrage_image_bloc_les_plus_populaires
 {
-    width: 170px;
-    height: 178px; 
+    width: 130px;
+    height: 135px;  
     object-fit: cover;
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
@@ -328,42 +338,40 @@ h1
 .description_texte_logement_les_plus_populaires
 {
     font-weight: bold;
-    font-size: 1.3em; 
+    font-size: 1.0em; 
 }
 
 .description_prix_logement_les_plus_populaires
 {
-    margin-top: -15px; 
     margin-bottom: 60px;
+    font-size: 0.8em; 
 }
 
 #titre_activite
 {
-    font-size: 2em;
+    font-size: 1.3em;
     padding-left: 10px;
 }
 
 .list_des_blocs_ativite
 {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap; 
+    margin-top: 20px;
 }
 
 .bloc_long_activite
 {
     background-color: #F2F2F2; 
     border-radius: 15px;
-    padding-bottom: 10px;
     box-shadow: 5px 5px 5px #F2F2F2;
-    margin: 0px 10px 20px 10px;
 }
 
 .image_bloc_long_activite
 {
-    width: 400px;
-    height: 515px; 
+    width: 305px;
+    height: 375px; 
     object-fit: cover;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -375,22 +383,19 @@ h1
     flex-direction: column; 
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 10px 10px 10px 10px;
 }
 
 .bloc_court_activite
 {
     background-color: #F2F2F2; 
     border-radius: 15px;
-    padding-bottom: 10px;
     box-shadow: 5px 5px 5px #F2F2F2;
-    margin-bottom: 20px;
 }
 
 .image_bloc_court_activite
 {
-    width: 400px;
-    height: 180px; 
+    width: 305px;
+    height: 155px; 
     object-fit: cover;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
@@ -399,58 +404,169 @@ h1
 .titre_bloc_activite
 {
     font-weight: bold;
-    font-size: 1.3em; 
+    font-size: 1em; 
     padding-left: 10px; 
 }
 
 footer
 {
-    margin: 80px -65px -40px -65px; 
     background-color: #F2F2F2;
+    margin-top: 60px;
+    padding-top: 50px;
+}
+.footer_row
+{
     display: flex; 
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    padding: 40px 0px 0px 30px;
 }
 
 .column_footer
 {
-    display: : flex;
+    display: flex;
     flex-direction: column; 
-    padding-right: 375px; 
 }
 
 .footer_list
 {
+    margin-right: 220px; 
     list-style: none;
 }
 
-.footer_list, li
+.footer_list_particularite
 {
-    padding-bottom: 20px; 
+    margin-right: 0px;
 }
 
 .titre_footer
 {
     font-weight: bold;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     font-size: 1.3em; 
 }
 
-@media screen and (max-width: 1600px)
+.texte_footer
+{
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width: 500px)
+{
+    .container
+    {
+        margin: 20px 20px 0px 20px;
+    }
+
+    #logements
+    {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .bloc_logement
+    {
+        box-shadow: 5px 5px 5px #F2F2F2;
+    }
+
+    #les_plus_populaires
+    {	
+        max-width: none;
+        background-color: #F2F2F2; 
+        border-radius: 0%;
+        padding-bottom: 30px;
+        margin-left: -20px; 
+        margin-right: -20px; 
+    }
+    .images_logements
+    {
+        width: 340px;
+        height: 135px; 
+    }
+    #logements_disponibles
+    {
+        margin-top: 40px; 
+        background-color: white;
+    }
+    #les_bloc_de_logement_disponible
+    {
+        justify-content: center;
+    }
+
+    header > .menu > nav
+    {
+        display: none;
+    }
+    header > .navbar_mobile > ul
+    {
+        list-style: none; 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        font-size: 1.3em;
+        border-bottom-style: solid;
+        border-bottom-color: #F2F2F2;
+        margin: 35px -20px 0px -20px; 
+    }
+    #afficher_plus
+    {
+        margin-left: -20px; 
+    }
+
+
+    .footer_row
+    {
+        flex-direction: column;
+    }
+    .footer_list
+    {
+        margin-right: 0px; 
+        margin-bottom: 20px;
+    }
+
+
+
+    #text_barre_de_recherche
+    {
+        padding-right: 0px; 
+    }
+    #bouton_recherche
+    {
+        padding-left: 10px; 
+        padding-right: 10px; 
+        margin-left: -150px; 
+    }
+
+    .list_des_blocs_ativite
+    {
+        justify-content: center;
+    }
+
+    .filtres
+    {
+        flex-direction: column;
+    }
+
+    .bloc_court_activite
+    {
+        margin-top: 20px;
+    }
+    .bloc_long_activite
+    {
+        margin-top: 20px; 
+    }
+
+
+    
+    
+}
+
+/* @media screen and (max-width: 1600px)
 {
     #logements
     {
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
-        margin-bottom: 60px;
-    }
-    body
-    {
-        margin-left: 25px; 
-        margin-right: 25px;
     }
 
     #les_plus_populaires
@@ -576,5 +692,5 @@ footer
     header > .navbar_mobile > ul > li:hover
     {
         border-top-color: #0065FC;
-    }*/
-}
+    }
+} */
